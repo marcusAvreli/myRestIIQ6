@@ -35,14 +35,16 @@ import sailpoint.service.oauth.OAuthTokenValidator;
 import sailpoint.tools.GeneralException;
 import sailpoint.web.LoginBean;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.json.JSONObject;
 
 import com.google.gson.Gson;
 
 @Provider
 public class ValidateToken extends AuthenticationFilter {
-	private static final Logger logger = Logger.getLogger(ValidateToken.class);
+	private static final Logger logger = LoggerFactory.getLogger(ValidateToken.class);
 
 	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_JSON })
